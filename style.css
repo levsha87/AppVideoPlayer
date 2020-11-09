@@ -28,12 +28,18 @@ body {
 
 }
 
+.sizeScreen {
+    max-width: 480px;
+}
+
 /* This css is only applied when fullscreen is active. */
 .player:fullscreen {
     max-width: none;
     width: 100%;
   }
   
+  
+
   .player:-webkit-full-screen {
     max-width: none;
     width: 100%;
