@@ -11,7 +11,7 @@
         <video class="player__video viewer" src="/video/Crazy Frog - Axel F (Official Video).mp4"></video>
         <section class="player__controls">
             <div class="progress">
-                <div class="progress__field">
+                <div class="progress__filled">
                 </div>
             </div>
             <button class="player__button toggle" title="Toggle Play">►</button>
@@ -19,8 +19,8 @@
             <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
             <label for="playbackRate">Speed:</label>
             <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
-            <button data-skip="-10" class="player__button"></button>
-            <button data-skip="25" class="player__button"></button>
+            <button data-skip="-10" class="player__button"><< 10s</button>
+            <button data-skip="25" class="player__button">25s >></button>
         </section>
     </main>
   <script src="/main.js"></script>  

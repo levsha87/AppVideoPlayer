@@ -12,6 +12,7 @@ body {
     display: flex;
     background-color: rgb(150, 214, 243);
     min-height: 100vh;
+    background-image: radial-gradient(circle, #d1ed6d, #feb753, #ff8270, #e2629b, #9160b7);
     background-size: cover;
     align-items: center;
     justify-content: center;
@@ -106,6 +107,7 @@ body {
   
   /* unholy css to style input type="range" */
   
+
   input[type=range] {
     -webkit-appearance: none;
     background: transparent;
@@ -160,3 +162,11 @@ body {
     background: #ffc600;
     cursor: pointer;
   }
+
+  label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: right;
+    margin-top: 6px;
+}
