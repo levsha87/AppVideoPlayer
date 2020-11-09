@@ -37,11 +37,17 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+function playAgain() {
+    video.currentTime = 0;
+    video();
+  }
+
 /* Hook up the event listeners */
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleProgress);
+video.addEventListener('dblclick', playAgain);
 
 toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
