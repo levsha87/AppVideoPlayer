@@ -25,7 +25,9 @@ function skip() {
 }
 
 function handleRangeUpdate() {
+  const percent = Math.round(this.value / this.getAttribute('max') * this.offsetWidth);
   video[this.name] = this.value;
+  this.style.setProperty('--input-track-vol', percent + 'px');
 }
 
 function handleProgress() {
@@ -59,7 +61,6 @@ skipButtons.forEach(button => button.addEventListener('click', skip));
 screenSizeButton.addEventListener('click', changeSizeScreen);
 ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
-
 let mousedown = false;
 progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
