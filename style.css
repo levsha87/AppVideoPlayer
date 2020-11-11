@@ -41,8 +41,6 @@ body {
     width: 100%;
   }
   
-  
-
   .player:-webkit-full-screen {
     max-width: none;
     width: 100%;
@@ -64,6 +62,17 @@ body {
     max-width: 50px;
   }
   
+  .player__button.toggle{
+    flex-basis: 50px;
+  }
+
+  .player__button.toggle.active::before {
+    content: '❚ ❚';
+  }
+  .player__button.toggle.nonactive::after{
+    content: '►';
+  }
+  
   .player__button:focus {
     border-color: #ffc600;
   }
@@ -82,7 +91,7 @@ body {
     flex-wrap: wrap;
     background: rgba(0,0,0,0.1);
   }
-  
+    
   .player:hover .player__controls {
     transform: translateY(0);
   }

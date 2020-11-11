@@ -16,14 +16,13 @@ function initVideoPlayer(){
     video[method]();
   }
 
-  function updateButton() {
+  function updateButtonPlayPause() {
     if(toggle.classList.contains('active')){
-      toggle.textContent = '❚ ❚';
+      toggle.classList.remove('nonactive');
     } else {
-      toggle.textContent = '►';
+      toggle.classList.add('nonactive');
     }
   }
-
 
   function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
@@ -64,7 +63,7 @@ function initVideoPlayer(){
   toggle.addEventListener('click', function(){
     this.classList.toggle('active');
   });
-  toggle.addEventListener('click', updateButton);
+  toggle.addEventListener('click', updateButtonPlayPause);
 
   skipButtons.forEach(button => button.addEventListener('click', skip));
   screenSizeButton.addEventListener('click', changeSizeScreen);
