@@ -15,19 +15,22 @@ function togglePlay() {
 }
 
 function updateButton() {
-  const icon = this.paused ? '►' : '❚ ❚';
-  console.log(icon);
-  toggle.textContent = icon;
+  if(toggle.classList.contains('active')){
+    toggle.textContent = '❚ ❚';
+  } else {
+    toggle.textContent = '►';
+  }
 }
+
 
 function skip() {
  video.currentTime += parseFloat(this.dataset.skip);
 }
 
 function handleRangeUpdate() {
-  const percent = Math.round(this.value / this.getAttribute('max') * this.offsetWidth);
+  const percent = Math.round(this.value / this.getAttribute('max') * 100);
   video[this.name] = this.value;
-  this.style.setProperty('--input-track-vol', percent + 'px');
+  this.style.setProperty('--input-track-vol', percent + '%');
 }
 
 function handleProgress() {
